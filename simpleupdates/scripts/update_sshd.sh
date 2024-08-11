@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define constants
-GITUSER="iamromulan"
+GITUSER="tonyhuya"
 GITTREE="development"
 DIR_NAME="simpleupdates"
 SERVICE_FILE="/lib/systemd/system/install_sshd.service"
@@ -29,7 +29,7 @@ EOF
 cat <<EOF > "$TMP_SCRIPT"
 #!/bin/bash
 
-GITUSER="iamromulan"
+GITUSER="tonyhuya"
 GITTREE="development"
 
 install_sshd() {
@@ -37,7 +37,7 @@ echo -e "\e[1;32mOpenSSH Server\e[0m"
         remount_rw
 
 	    mkdir /usrdata/sshd
-        wget -O /lib/systemd/system/sshd.service "https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/sshd/sshd.service"
+        wget -O /lib/systemd/system/sshd.service "https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/sshd/sshd.service"
     	ln -sf "/lib/systemd/system/sshd.service" "/lib/systemd/system/multi-user.target.wants/"
         
         opkg install openssh-server-pam

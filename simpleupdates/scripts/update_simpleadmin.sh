@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define constants
-GITUSER="iamromulan"
+GITUSER="tonyhuya"
 GITTREE="development"
 DIR_NAME="simpleadmin"
 SERVICE_FILE="/lib/systemd/system/install_simpleadmin.service"
@@ -38,7 +38,7 @@ EOF
 cat <<EOF > "$TMP_SCRIPT"
 #!/bin/bash
 
-GITUSER="iamromulan"
+GITUSER="tonyhuya"
 GITTREE="development"
 SIMPLE_ADMIN_DIR="/usrdata/simpleadmin"
 
@@ -101,8 +101,8 @@ install_lighttpd() {
     systemctl stop lighttpd
     echo -e "\033[0;32mInstalling/Updating Lighttpd...\033[0m"
     mkdir -p "$SIMPLE_ADMIN_DIR"
-    wget -O "$SIMPLE_ADMIN_DIR/lighttpd.conf" https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/lighttpd.conf
-    wget -O "/lib/systemd/system/lighttpd.service" https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/systemd/lighttpd.service
+    wget -O "$SIMPLE_ADMIN_DIR/lighttpd.conf" https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/lighttpd.conf
+    wget -O "/lib/systemd/system/lighttpd.service" https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/systemd/lighttpd.service
     ln -sf "/lib/systemd/system/lighttpd.service" "/lib/systemd/system/multi-user.target.wants/"
     echo "www-data ALL = (root) NOPASSWD: /usr/sbin/iptables, /usr/sbin/ip6tables, /usrdata/simplefirewall/ttl-override, /bin/echo, /bin/cat" > /opt/etc/sudoers.d/www-data
 
@@ -129,36 +129,36 @@ echo -e "\e[1;31m2) Installing simpleadmin from the $GITTREE branch\e[0m"
 			mkdir $SIMPLE_ADMIN_DIR/www/css
     		mkdir $SIMPLE_ADMIN_DIR/www/js
             cd $SIMPLE_ADMIN_DIR/systemd
-            wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/systemd/lighttpd.service
+            wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/systemd/lighttpd.service
 			sleep 1
 			cd $SIMPLE_ADMIN_DIR/www
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/deviceinfo.html
-   			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/favicon.ico
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/index.html
-    		        wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/network.html
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/settings.html
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/sms.html
-   			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/logout.html
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/deviceinfo.html
+   			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/favicon.ico
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/index.html
+    		        wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/network.html
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/settings.html
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/sms.html
+   			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/logout.html
 			sleep 1
 			cd $SIMPLE_ADMIN_DIR/www/js
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/alpinejs.min.js
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/bootstrap.bundle.min.js
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/dark-mode.js
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/generate-freq-box.js
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/parse-settings.js
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/populate-checkbox.js
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/alpinejs.min.js
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/bootstrap.bundle.min.js
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/dark-mode.js
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/generate-freq-box.js
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/parse-settings.js
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/js/populate-checkbox.js
     		sleep 1
     		cd $SIMPLE_ADMIN_DIR/www/css
-    		wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/css/bootstrap.min.css
-      		wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/css/styles.css
+    		wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/css/bootstrap.min.css
+      		wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/css/styles.css
 			sleep 1
 			cd $SIMPLE_ADMIN_DIR/www/cgi-bin
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/get_atcommand
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/get_ping
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/get_sms
-    		wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/get_ttl_status
-      		wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/set_ttl
-			wget https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/send_sms
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/get_atcommand
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/get_ping
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/get_sms
+    		wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/get_ttl_status
+      		wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/set_ttl
+			wget https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/www/cgi-bin/send_sms
 			sleep 1
 			cd /
             chmod +x $SIMPLE_ADMIN_DIR/www/cgi-bin/*
@@ -171,8 +171,8 @@ install_ttyd() {
     echo -e "\e[1;34mStarting ttyd installation process...\e[0m"
     cd $SIMPLE_ADMIN_DIR
     wget -O ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.armhf && chmod +x ttyd
-    wget -O $SIMPLE_ADMIN_DIR/console/ttyd.bash "https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/console/ttyd.bash" && chmod +x console/ttyd.bash
-    wget -O $SIMPLE_ADMIN_DIR/systemd/ttyd.service "https://raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/systemd/ttyd.service"
+    wget -O $SIMPLE_ADMIN_DIR/console/ttyd.bash "https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/console/ttyd.bash" && chmod +x console/ttyd.bash
+    wget -O $SIMPLE_ADMIN_DIR/systemd/ttyd.service "https://raw.gitmirror.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE/simpleadmin/systemd/ttyd.service"
     cp -f $SIMPLE_ADMIN_DIR/systemd/ttyd.service /lib/systemd/system/
     ln -sf /usrdata/simpleadmin/ttyd /bin
     

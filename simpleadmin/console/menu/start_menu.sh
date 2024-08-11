@@ -51,8 +51,8 @@ toolkit() {
             6) htop ;;
             7) $EXE/speedtest ;;
             8) $EXE/fast ;;
-            9) cd /tmp && wget -O RMxxx_rgmii_toolkit.sh https://raw.githubusercontent.com/iamromulan/quectel-rgmii-toolkit/main/RMxxx_rgmii_toolkit.sh && chmod +x RMxxx_rgmii_toolkit.sh && ./RMxxx_rgmii_toolkit.sh && cd / ;;
-            10) cd /tmp && wget -O RMxxx_rgmii_toolkit.sh https://raw.githubusercontent.com/iamromulan/quectel-rgmii-toolkit/development/RMxxx_rgmii_toolkit.sh && chmod +x RMxxx_rgmii_toolkit.sh && ./RMxxx_rgmii_toolkit.sh && cd / ;;
+            9) cd /tmp && wget -O RMxxx_rgmii_toolkit.sh https://raw.gitmirror.com/tonyhuya/quectel-rgmii-toolkit/development/RMxxx_rgmii_toolkit.sh && chmod +x RMxxx_rgmii_toolkit.sh && ./RMxxx_rgmii_toolkit.sh && cd / ;;
+            10) cd /tmp && wget -O RMxxx_rgmii_toolkit.sh https://raw.gitmirror.com/tonyhuya/quectel-rgmii-toolkit/development/RMxxx_rgmii_toolkit.sh && chmod +x RMxxx_rgmii_toolkit.sh && ./RMxxx_rgmii_toolkit.sh && cd / ;;
             11) break ;;
             *) echo "Invalid option. Please try again." ;;
         esac
@@ -87,8 +87,8 @@ apps() {
             6) htop ;;
             7) $EXE/speedtest ;;
             8) $EXE/fast ;;
-            9) cd /tmp && wget -O RMxxx_rgmii_toolkit.sh https://raw.githubusercontent.com/iamromulan/quectel-rgmii-toolkit/main/RMxxx_rgmii_toolkit.sh && chmod +x RMxxx_rgmii_toolkit.sh && ./RMxxx_rgmii_toolkit.sh && cd / ;;
-            10) cd /tmp && wget -O RMxxx_rgmii_toolkit.sh https://raw.githubusercontent.com/iamromulan/quectel-rgmii-toolkit/development/RMxxx_rgmii_toolkit.sh && chmod +x RMxxx_rgmii_toolkit.sh && ./RMxxx_rgmii_toolkit.sh && cd / ;;
+            9) cd /tmp && wget -O RMxxx_rgmii_toolkit.sh https://raw.gitmirror.com/tonyhuya/quectel-rgmii-toolkit/development/RMxxx_rgmii_toolkit.sh && chmod +x RMxxx_rgmii_toolkit.sh && ./RMxxx_rgmii_toolkit.sh && cd / ;;
+            10) cd /tmp && wget -O RMxxx_rgmii_toolkit.sh https://raw.gitmirror.com/tonyhuya/quectel-rgmii-toolkit/development/RMxxx_rgmii_toolkit.sh && chmod +x RMxxx_rgmii_toolkit.sh && ./RMxxx_rgmii_toolkit.sh && cd / ;;
             11) break ;;
             *) echo "Invalid option. Please try again." ;;
         esac
